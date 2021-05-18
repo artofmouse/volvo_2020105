@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko" style="height:100%;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+	<title>BUCKLE UP! Campaign | H MOTORS | VOLVO</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	
+
+	<style>
+		.black_overlay {
+			display: none;
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.90;
+			filter: alpha(opacity=90);
+			z-index:1000;
+		}
+		.pop_content {
+			display:none;
+			position:absolute;
+			/*top: 20%;
+            left: 20%;*/
+			top: 0%;
+			left: 0%;
+			transform: translate(0%, -100%);
+			width: 100%;
+			height: 100%;
+			padding: 0px!important;
+			z-index:1002;
+			overflow: auto;
+		}
+		.pop_txt {float: left; color: #FFFFFF; font-size: 12px; margin: 10px  5px 5px 10px; }
+		.btn_close {font-size: 12px; font-weight: 300; color:#fff; float: right;  border: 0px solid #D1D1D1; border-radius: 30px; padding:5px 10px ; margin: 5px  5px 30px 30px; letter-spacing:0.01em;   background-color: #000000 }
+	</style>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+    <div style="position: absolute;top:50px;left:50px;">
+        <button onclick="openPop('app_end1')">응모완료1주차</button>
+        <button onclick="openPop('app_end2')">응모완료2주차</button>
+        <button onclick="openPop('app_end3')">응모완료3주차</button>
+    </div>
+    <!-- 응모완료1주차 -->
+	<div class="pop_layer pop_app_end1" id="app_end1" style="display: none;">
+		<div class="top_header">
+            <h1 class="pop_header_tl"><a href="#"></a></h1>
+            <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('app_end1')"></a></div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_tl_area">
+                <div class="pop_tl">
+                    KOLON AUTOMOTIVE
+                </div>
+                <div class="pop_tl2">
+                    MADE BY <strong>YOU</strong>
+                </div>
+                <div class="pop_stl">
+                    온라인 이벤트 응모 완료!
+                </div>
+            </div>
+            <div class="img_area">
+                <img src="images/popup/pop_app_end_img.jpg" alt="">
+            </div>
+            <div class="pop_con">
+                <div class="pop_con_text1">
+                    1주차 <span>&#60;Healing&#62;</span> 이벤트 응모가 완료되었습니다.
+                </div>
+                <div class="pop_con_text2">
+                    매 주 달라지는 테마에 응모하시고
+                    이벤트 당첨 확률을 높여 보세요.
+                </div>
+                <div class="pop_con_box">
+                    <div class="con_box_top">
+                        <dl>
+                            <dt>1주차 <strong>&#60;Healing&#62;</strong></dt>
+                            <dd>: 5/28(금)~6/3(목)</dd>
+                        </dl>
+                        <dl>
+                            <dt>2주차 <strong>&#60;Love&#62;</strong></dt>
+                            <dd>: 6/4(금)~6/10(목)</dd>
+                        </dl>
+                        <dl>
+                            <dt>3주차 <strong>&#60;Work&#62;</strong></dt>
+                            <dd>: 6/11(금)~6/17(목)</dd>
+                        </dl>
+                    </div>
+                    <div class="con_box_bottom">
+                        *당첨자 발표: 6/24(목) 이벤트 페이지
+                    </div>
+                </div>
+                <div class="pop_bottom_text">
+                    코오롱 오토모티브와 함꼐 해주셔서 감사합니다.
+                </div>
+            </div>
+            <div class="pop_bottom_btn" onclick="closePop('app_end1')">
+                확인
+            </div>
+        </div>
+	</div>
+    <!-- 응모완료2주차 -->
+	<div class="pop_layer pop_app_end1" id="app_end2" style="display: none;">
+		<div class="top_header">
+            <h1 class="pop_header_tl"><a href="#"></a></h1>
+            <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('app_end2')"></a></div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_tl_area">
+                <div class="pop_tl">
+                    KOLON AUTOMOTIVE
+                </div>
+                <div class="pop_tl2">
+                    MADE BY <strong>YOU</strong>
+                </div>
+                <div class="pop_stl">
+                    온라인 이벤트 응모 완료!
+                </div>
+            </div>
+            <div class="img_area">
+                <img src="images/popup/pop_app_end_img.jpg" alt="">
+            </div>
+            <div class="pop_con">
+                <div class="pop_con_text1">
+                    2주차 <span>&#60;Love&#62;</span> 이벤트 응모가 완료되었습니다.
+                </div>
+                <div class="pop_con_text2">
+                    3주차 <span>&#60;WORK&#62;</span> 테마에도 응모하시고<br>
+                    이벤트 당첨 확률을 높여 보세요.
+                </div>
+                <div class="pop_con_box">
+                    <div class="con_box_top">
+                        <dl>
+                            <dt>1주차 <strong>&#60;Healing&#62;</strong></dt>
+                            <dd>: 5/28(금)~6/3(목)</dd>
+                        </dl>
+                        <dl>
+                            <dt>2주차 <strong>&#60;Love&#62;</strong></dt>
+                            <dd>: 6/4(금)~6/10(목)</dd>
+                        </dl>
+                        <dl>
+                            <dt>3주차 <strong>&#60;Work&#62;</strong></dt>
+                            <dd>: 6/11(금)~6/17(목)</dd>
+                        </dl>
+                    </div>
+                    <div class="con_box_bottom">
+                        *당첨자 발표: 6/24(목) 이벤트 페이지
+                    </div>
+                </div>
+                <div class="pop_bottom_text">
+                    코오롱 오토모티브와 함꼐 해주셔서 감사합니다.
+                </div>
+            </div>
+            <div class="pop_bottom_btn" onclick="closePop('app_end2')">
+                확인
+            </div>
+        </div>
+	</div>
+    <!-- 응모완료3주차 -->
+	<div class="pop_layer pop_app_end2" id="app_end3" style="display: none;">
+		<div class="top_header">
+            <h1 class="pop_header_tl"><a href="#"></a></h1>
+            <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('app_end3')"></a></div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_tl_area">
+                <div class="pop_tl">
+                    KOLON AUTOMOTIVE
+                </div>
+                <div class="pop_tl2">
+                    MADE BY <strong>YOU</strong>
+                </div>
+                <div class="pop_stl">
+                    온라인 이벤트 응모 완료!
+                </div>
+            </div>
+            <div class="img_area">
+                <img src="images/popup/pop_app_end_img.jpg" alt="">
+            </div>
+            <div class="pop_con">
+                <div class="pop_con_text1">
+                    32주차 &#60;WORK&#62; 이벤트 응모가 완료되었습니다.
+                </div>
+                <div class="pop_con_text2">
+                    당첨자 발표를 기다려 주세요.
+                </div>
+                <div class="pop_con_box">
+                    *당첨자 발표: 6/24(목)<br>
+                    이벤트 페이지
+                </div>
+                <div class="pop_bottom_text">
+                    코오롱 오토모티브와 함꼐 해주셔서 감사합니다.
+                </div>
+            </div>
+            <div class="pop_bottom_btn" onclick="closePop('app_end3')">
+                확인
+            </div>
+        </div>
+	</div>
+    <!-- 응모하기 -->
+	<div class="pop_layer event_app1" id="event_app1" style="display: block;">
+		<div class="top_header">
+            <h1 class="pop_header_tl"><a href="#"></a></h1>
+            <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('event_app1')"></a></div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_tl_area">
+                <div class="pop_tl">
+                    KOLON AUTOMOTIVE
+                </div>
+                <div class="pop_tl2">
+                    MADE BY <strong>YOU</strong>
+                </div>
+                <div class="pop_stl">
+                    온라인 이벤트 정보 입력
+                </div>
+            </div>
+           
+            <div class="pop_con">
+                <!-- 개인정보 수집동의 -->
+                <div class="app_tl">
+                    1. 개인정보 수집·이용 및 처리 위탁에 대한 동의 안내
+                </div>
+                <div class="app_con">
+                    MADE BY YOU 이벤트 응모를 위한 개인정보 수집·이용 및 처리 위탁에 관한 내용을 읽고 동의해주세요.<br>
+                    이 동의를 거부할 수 있으나, 동의하지 않을 경우 해당 이벤트에 응모하실 수 없습니다.
+                </div>
+                <div class="app_con_box">
+                    <div class="con_box_top">
+                        <dl>
+                            <dt class="check_area"><input type="checkbox" id="chk_all" /><label for="chk_all">전체 동의</label></dt>
+                            <!-- <dd></dd> -->
+                        </dl>
+                    </div>
+                    <div class="con_box_bottom">
+                        <dl>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree1" class="normal"/><label for="chk_agree1">* 개인정보 수집 및 이용 동의</label></dt>
+                            <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
+                        </dl>
+                        <dl>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree2" class="normal"/><label for="chk_agree2">* 개인정보 처리 위탁 동의</label></dt>
+                            <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
+                        </dl>
+                        <dl>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree3" class="normal"/><label for="chk_agree3">* 만 14세 참여 확인 동의</label></dt>
+                            <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 응모 정보 입력 -->
+                <div class="app_tl">
+                    2. 응모 정보 입력 
+                    <span>* 항목은 필수 입력 항목입니다.</span>
+                </div>
+                <div class="app_info_reg">
+                    <dl class="essential">
+                        <dt>이름</dt>
+                        <dd><input type="text" placeholder="차량 등록증 내 명의자 성함"/></dd>
+                    </dl>
+                    <dl class="essential no_mar">
+                        <dt class="align_top">고객 유형</dt>
+                        <dd>
+                            <input type="radio" id="used_customer" name="customer" checked/>
+                            <label for="used_customer">
+                                기존 이용 고객<br>
+                                <span>(기존에 차량 구매 혹은 서비스센터 이용 고객)</span>
+                            </label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <input type="radio" id="wait_customer" name="customer"/>
+                            <label for="wait_customer">
+                                출고 대기 고객
+                                <span>(계약 완료 고객)</span>
+                            </label>
+                        </dd>
+                    </dl>
+                    <div class="wide_dl_con">코오롱 오토모티브 이용 이력 <span>※1개 이상 선택 필수, 중복 선택 가능</span></div>
+                    <dl class="used_history">
+                        <dt>1.신규 차량 구매</dt>
+                        <dd>
+                            <select>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="used_history">
+                        <dt>1.신규 차량 구매</dt>
+                        <dd>
+                            <select>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="used_history last_dl">
+                        <dt>1.신규 차량 구매</dt>
+                        <dd>
+                            <select>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                                <option>이용 전시장 선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>영업 사원명</dt>
+                        <dd><input type="text" placeholder="담당 영업 사원명 입력(구매고객)"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>차량 번호</dt>
+                        <dd><input type="text" placeholder="볼보 차량 번호 입력"/></dd>
+                    </dl>
+                    <dl class="essential">
+                        <dt>휴대폰 번호</dt>
+                        <dd class="phone">
+                            <input type="text" placeholder="- 없이 휴대폰 번호 입력"/><button>인증번호<br>발송</button><br>
+                            <p>※구매하신 고객님의 연락처로 인증해주세요.</p>
+                        </dd>
+                    </dl>
+                    <dl class="essential">
+                        <dt>인증 번호</dt>
+                        <dd>
+                            <input type="text" placeholder="인증 번호 입력"/>
+                            <span class="certify">03:00</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="pop_bottom_btn type_blue" onclick="closePop('event_app1')">
+                응모하기
+            </div>
+        </div>
+	</div>
+
+</div>
+
+<div id="fade" class="black_overlay"></div>
+<!-- //wrap -->
+<script type="text/javascript">
+    function openPop(param){
+        $('#'+param).show();
+    }
+    function closePop(param){
+        $('#'+param).hide();
+    }
+
+    // 체크박스 전체 선택
+    $(".app_con_box").on("click", "#chk_all", function () {
+        $(this).parents(".app_con_box").find('input').prop("checked", $(this).is(":checked"));
+    });
+
+    // 체크박스 개별 선택
+    $(".app_con_box").on("click", ".normal", function() {
+        var is_checked = true;
+        $(".app_con_box .normal").each(function(){
+            is_checked = is_checked && $(this).is(":checked");
+        });
+        $("#chk_all").prop("checked", is_checked);
+    });
+</script>
+</body>
+</html>
