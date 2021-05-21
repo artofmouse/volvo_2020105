@@ -55,21 +55,25 @@
     letter-spacing: 1px;
     animation: visualText1 1.2s;
 }
-#campaign_container .visual .title .title_text1{
+
+#campaign_container .visual .title .title_text1 {
     width: 100%;
     display: block;
     font-size: 27px;
     letter-spacing: 0px;
 }
-#campaign_container .visual .title .title_text2{
+
+#campaign_container .visual .title .title_text2 {
     width: 100%;
     display: block;
     font-size: 65px;
 }
-#campaign_container .visual .title .title_text2 strong{
+
+#campaign_container .visual .title .title_text2 strong {
     font-weight: 700;
     position: relative;
 }
+
 #campaign_container .visual .title .title_text2 strong::after {
     content: '';
     display: block;
@@ -80,11 +84,12 @@
     left: 1px;
     background: #fff;
 }
-#campaign_container .visual .title .title_text3{
+
+#campaign_container .visual .title .title_text3 {
     width: 100%;
     display: block;
     font-size: 20px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 #campaign_container .visual .txt {
@@ -100,14 +105,17 @@
     line-height: 1.6;
     animation: visualText2 1.5s;
 }
-#campaign_container .visual .txt div{
+
+#campaign_container .visual .txt div {
     margin-bottom: 20px;
 }
-#campaign_container .main_contents{
-    width:100%;
+
+#campaign_container .main_contents {
+    width: 100%;
     max-width: 1280px;
-    margin:0 auto;
+    margin: 0 auto;
 }
+
 h3.title_group {
     margin-top: 70px;
 }
@@ -115,13 +123,15 @@ h3.title_group {
 h3.title_group .tl_text {
     font-size: 28px;
     margin-top: 102px;
-    color:#102f54;
+    color: #102f54;
     position: relative;
 }
+
 h3.title_group .tl_text strong {
     font-weight: 700;
     position: relative;
 }
+
 h3.title_group .tl_text strong::after {
     content: '';
     display: block;
@@ -132,24 +142,30 @@ h3.title_group .tl_text strong::after {
     left: 1px;
     background: #102f54;
 }
+
 h3.title_group .stl_text1 {
     margin-top: 30px;
 }
-h3.title_group .stl_text1 .stl_text1_1{
+
+h3.title_group .stl_text1 .stl_text1_1 {
     font-size: 28px;
-    color:#102f54;
+    color: #102f54;
 }
-h3.title_group .stl_text1 .stl_text1_2{
+
+h3.title_group .stl_text1 .stl_text1_2 {
     font-size: 20px;
 }
+
 h3.title_group .stl_text2 {
     margin-top: 65px;
 }
-h3.title_group .stl_text2 .stl_text2_1{
+
+h3.title_group .stl_text2 .stl_text2_1 {
     font-size: 28px;
-    color:#102f54;
+    color: #102f54;
 }
-h3.title_group .stl_text1 .stl_text2_2{
+
+h3.title_group .stl_text1 .stl_text2_2 {
     font-size: 20px;
 }
 
@@ -157,30 +173,34 @@ h3.title_group .stl_text1 .stl_text2_2{
 .media_group {
     width: 100%;
     height: auto;
-    margin-top:70px;
+    margin-top: 70px;
     overflow: hidden;
 }
+
 .media_group .media_stl {
     width: 100%;
     background-color: #FFF;
     display: block;
     text-align: center;
 }
-.media_group .media_stl .stl_text1{
+
+.media_group .media_stl .stl_text1 {
     font-size: 28px;
-    color:#102f54;
+    color: #102f54;
 }
-.media_group .media_stl .stl_text2{
+
+.media_group .media_stl .stl_text2 {
     font-size: 20px;
 }
+
 .media_group .media_inner {
     overflow: hidden;
     width: 100%;
     height: auto;
     background-color: #FFF;
     display: block;
-    margin-top:35px;
-    
+    margin-top: 35px;
+
 }
 
 .media_group .media_inner li {
@@ -189,6 +209,7 @@ h3.title_group .stl_text1 .stl_text2_2{
     position: relative;
     padding-top: 56%
 }
+
 .media_group .media_inner li iframe {
     z-index: 1;
     top: 0;
@@ -196,22 +217,7 @@ h3.title_group .stl_text1 .stl_text2_2{
     position: absolute;
     width: 100%;
     height: 100%;
-  }
-
-.media_group .media_inner li.img1 {
-    /* background: url("../images/slide_img1.png") 50% 50% no-repeat; */
 }
-
-.media_group .media_inner li.img2 {
-    /* background: url("../images/slide_img2.png") 50% 50% no-repeat; */
-}
-
-.media_group .media_inner li.img3 {
-    /* background: url("../images/slide_img3.png") 50% 50% no-repeat; */
-}
-
-
-
 
 .gallery_group {
     width: 100%;
@@ -222,7 +228,7 @@ h3.title_group .stl_text1 .stl_text2_2{
     overflow: hidden;
     width: 100%;
     background-color: #FFF;
-    margin:10% 0 0 0;
+    margin: 10% 0 0 0;
 }
 
 .gallery_group .gallery_inner li {
@@ -230,14 +236,15 @@ h3.title_group .stl_text1 .stl_text2_2{
     width: 50%;
     height: auto;
 }
+
 .gallery_group .gallery_inner li.img2 {
     float: right;
 }
 
 
-.gallery_group .gallery_inner li img{
-    width:100%;
-    height:auto;
+.gallery_group .gallery_inner li img {
+    width: 100%;
+    height: auto;
 }
 
 .gallery_group .gallery_inner li.txt_group {
@@ -262,6 +269,7 @@ h3.title_group .stl_text1 .stl_text2_2{
     font-weight: bold;
     letter-spacing: -2px;
 }
+
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -1050,7 +1058,7 @@ h3.title_group .stl_text1 .stl_text2_2{
     0% {
         -webkit-transform: translate(-50%, 20px);
         transform: translate(-50%, 20px);
-        opacity: 0 ;
+        opacity: 0;
         -webkit-filter: blur(12px);
         filter: blur(12px);
     }
@@ -1461,12 +1469,14 @@ input:-mos-input-placeholder {
     h3.title_group .tl_text {
         font-size: 28px;
         margin-top: 102px;
-        color:#102f54;
+        color: #102f54;
     }
+
     h3.title_group .tl_text strong {
         font-weight: 700;
         position: relative;
     }
+
     h3.title_group .tl_text strong::after {
         content: '';
         display: block;
@@ -1477,24 +1487,30 @@ input:-mos-input-placeholder {
         left: 1px;
         background: #102f54;
     }
+
     h3.title_group .stl_text1 {
         margin-top: 30px;
     }
-    h3.title_group .stl_text1 .stl_text1_1{
+
+    h3.title_group .stl_text1 .stl_text1_1 {
         font-size: 28px;
-        color:#102f54;
+        color: #102f54;
     }
-    h3.title_group .stl_text1 .stl_text1_2{
+
+    h3.title_group .stl_text1 .stl_text1_2 {
         font-size: 20px;
     }
+
     h3.title_group .stl_text2 {
         margin-top: 65px;
     }
-    h3.title_group .stl_text2 .stl_text2_1{
+
+    h3.title_group .stl_text2 .stl_text2_1 {
         font-size: 28px;
-        color:#102f54;
+        color: #102f54;
     }
-    h3.title_group .stl_text1 .stl_text2_2{
+
+    h3.title_group .stl_text1 .stl_text2_2 {
         font-size: 20px;
     }
 
@@ -1544,20 +1560,24 @@ input:-mos-input-placeholder {
         letter-spacing: -1px;
         animation: visualText1 1.2s;
     }
-    #campaign_container .visual .title .title_text1{
+
+    #campaign_container .visual .title .title_text1 {
         width: 100%;
         display: block;
         font-size: 22px;
     }
-    #campaign_container .visual .title .title_text2{
+
+    #campaign_container .visual .title .title_text2 {
         width: 100%;
         display: block;
         font-size: 50px;
     }
-    #campaign_container .visual .title .title_text2 strong{
+
+    #campaign_container .visual .title .title_text2 strong {
         font-weight: 700;
         position: relative;
     }
+
     #campaign_container .visual .title .title_text2 strong::after {
         content: '';
         display: block;
@@ -1568,11 +1588,12 @@ input:-mos-input-placeholder {
         left: 1px;
         background: #fff;
     }
-    #campaign_container .visual .title .title_text3{
+
+    #campaign_container .visual .title .title_text3 {
         width: 100%;
         display: block;
         font-size: 16px;
-        margin-top:20px;
+        margin-top: 20px;
     }
 
     #campaign_container .visual .txt {
@@ -1609,6 +1630,7 @@ input:-mos-input-placeholder {
         background: url("../images/img01_m.jpg") 50% top no-repeat;
         background-size: contain; */
     }
+
     .gallery_group .gallery_inner li.img2 {
         float: none;
         width: 100%;
@@ -2269,18 +2291,19 @@ input:-mos-input-placeholder {
     .detail_group_area .txt_box .txt_box_inner .img_down .img_down_box #sign_canvas_3 {
         top: 70px;
     }
-    
-    #campaign_container .visual .title .title_text1{
+
+    #campaign_container .visual .title .title_text1 {
         width: 100%;
         display: block;
         font-size: 20px;
     }
-    #campaign_container .visual .title .title_text2{
+
+    #campaign_container .visual .title .title_text2 {
         width: 100%;
         display: block;
         font-size: 36px;
     }
-   
+
     #campaign_container .visual .title .title_text2 strong::after {
         content: '';
         display: block;
@@ -2291,11 +2314,12 @@ input:-mos-input-placeholder {
         left: 1px;
         background: #fff;
     }
-    #campaign_container .visual .title .title_text3{
+
+    #campaign_container .visual .title .title_text3 {
         width: 100%;
         display: block;
         font-size: 14px;
-        margin-top:20px;
+        margin-top: 20px;
     }
 
     #campaign_container .visual .txt {
