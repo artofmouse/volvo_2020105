@@ -11,40 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/popup.css">
 	<script src="js/jquery-1.11.1.min.js"></script>
-	
-
-	<style>
-		.black_overlay {
-			display: none;
-			position: fixed;
-			top: 0%;
-			left: 0%;
-			width: 100%;
-			height: 100%;
-			background-color: black;
-			z-index:1001;
-			-moz-opacity: 0.8;
-			opacity:.90;
-			filter: alpha(opacity=90);
-			z-index:1000;
-		}
-		.pop_content {
-			display:none;
-			position:absolute;
-			/*top: 20%;
-            left: 20%;*/
-			top: 0%;
-			left: 0%;
-			transform: translate(0%, -100%);
-			width: 100%;
-			height: 100%;
-			padding: 0px!important;
-			z-index:1002;
-			overflow: auto;
-		}
-		.pop_txt {float: left; color: #FFFFFF; font-size: 12px; margin: 10px  5px 5px 10px; }
-		.btn_close {font-size: 12px; font-weight: 300; color:#fff; float: right;  border: 0px solid #D1D1D1; border-radius: 30px; padding:5px 10px ; margin: 5px  5px 30px 30px; letter-spacing:0.01em;   background-color: #000000 }
-	</style>
 </head>
 
 <body>
@@ -56,6 +22,7 @@
         <button onclick="openPop('app_end2')">응모완료2주차</button>
         <button onclick="openPop('app_end3')">응모완료3주차</button>
         <button onclick="openPop('event_app1')">응모하기1</button>
+        <button onclick="openPop('info_agree1')">개인정보수집동의1</button>
     </div>
     <!-- 응모완료1주차 -->
 	<div class="pop_layer pop_app_end1" id="app_end1" style="display: none;">
@@ -213,7 +180,7 @@
         </div>
 	</div>
     <!-- 응모하기 -->
-	<div class="pop_layer event_app1" id="event_app1" style="display: block;">
+	<div class="pop_layer event_app1" id="event_app1" style="display: none;">
 		<div class="top_header">
             <h1 class="pop_header_tl"><a href="#"></a></h1>
             <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('event_app1')"></a></div>
@@ -249,15 +216,15 @@
                     </div>
                     <div class="con_box_bottom">
                         <dl>
-                            <dt class="check_area"><input type="checkbox" id="chk_agree1" class="normal"/><label for="chk_agree1">* 개인정보 수집 및 이용 동의</label></dt>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree1" class="normal"/><label for="chk_agree1">개인정보 수집 및 이용 동의</label></dt>
                             <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
                         </dl>
                         <dl>
-                            <dt class="check_area"><input type="checkbox" id="chk_agree2" class="normal"/><label for="chk_agree2">* 개인정보 처리 위탁 동의</label></dt>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree2" class="normal"/><label for="chk_agree2">개인정보 처리 위탁 동의</label></dt>
                             <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
                         </dl>
                         <dl>
-                            <dt class="check_area"><input type="checkbox" id="chk_agree3" class="normal"/><label for="chk_agree3">* 만 14세 참여 확인 동의</label></dt>
+                            <dt class="check_area"><input type="checkbox" id="chk_agree3" class="normal"/><label for="chk_agree3">만 14세 참여 확인 동의</label></dt>
                             <dd><a href="javascript:void(0)" onclick="openPop('report_all_view')">[전문 보기]</a></dd>
                         </dl>
                     </div>
@@ -277,8 +244,8 @@
                         <dd>
                             <input type="radio" id="used_customer" name="customer" checked/>
                             <label for="used_customer">
-                                기존 이용 고객<br>
-                                <span>(기존에 차량 구매 혹은 서비스센터 이용 고객)</span>
+                                기존 이용 고객
+                                <div class="noti_text">(기존에 차량 구매 혹은 서비스센터 이용 고객)</div>
                             </label>
                         </dd>
                     </dl>
@@ -334,7 +301,7 @@
                     <dl class="essential">
                         <dt>휴대폰 번호</dt>
                         <dd class="phone">
-                            <input type="text" placeholder="- 없이 휴대폰 번호 입력"/><button>인증번호<br>발송</button><br>
+                            <input type="text" placeholder="- 없이 휴대폰 번호 입력"/><button>인증 번호 발송</button><br>
                             <p>※구매하신 고객님의 연락처로 인증해주세요.</p>
                         </dd>
                     </dl>
@@ -352,16 +319,109 @@
             </div>
         </div>
 	</div>
-
+    <!-- 개인정보 수집 동의서 -->
+	<div class="pop_layer info_agree1" id="info_agree1" style="display: none;">
+		<div class="top_header_blue">
+            <h1 class="pop_header_tl">개인정보 수집 및 이용 동의서</h1>
+            <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('info_agree1')"></a></div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_tl_area">
+                <span>MADE BY <strong>YOU</strong></span> 이벤트와 관련해<br>
+                본인의 개인정보를 코오롱오토모티브 주식회사가<br>
+                다음과 같이 수집·이용하는 것에 동의합니다.
+            </div>
+           
+            <div class="pop_con">
+                <table cellspacing="0" cellpadding="0">
+                    <colgroup>
+                        <col width="24%"/>
+                        <col width="29%"/>
+                        <col width="24%"/>
+                        <col width="23%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>수집·이용 목적</th>
+                            <th>수집 항목</th>
+                            <th>보유 기간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>구분</td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>구분</td>
+                        </tr>
+                        <tr class="highlight_gray">
+                            <td class="vertical_mid">구분</td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>구분</td>
+                        </tr>
+                        <tr>
+                            <td>구분</td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                    <li>이벤트 대상 여부 확인</li>
+                                </ul>
+                            </td>
+                            <td>구분</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="agree_bottom_text">이 동의는 이벤트 응모를 위한</div>
+                <div class="agree_bottom_text text2">이 동의는 이벤트 응모를 위한</div>
+            </div>
+        </div>
+	</div>
+    <div id="fade" class="black_overlay"></div>
 </div>
 
-<div id="fade" class="black_overlay"></div>
+
 <!-- //wrap -->
 <script type="text/javascript">
     function openPop(param){
+        $('#fade').show();
         $('#'+param).show();
     }
     function closePop(param){
+        $('#fade').hide();
         $('#'+param).hide();
     }
 
