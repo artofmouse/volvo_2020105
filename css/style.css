@@ -219,55 +219,195 @@ h3.title_group .stl_text1 .stl_text2_2 {
     height: 100%;
 }
 
-.gallery_group {
+.event_group {
     width: 100%;
     padding: 100px 0 150px;
 }
 
-.gallery_group .gallery_inner {
+.event_group .event_inner {
     overflow: hidden;
     width: 100%;
     background-color: #FFF;
     margin: 10% 0 0 0;
 }
 
-.gallery_group .gallery_inner li {
+.event_group .event_inner li {
     float: left;
     width: 50%;
     height: auto;
 }
 
-.gallery_group .gallery_inner li.img2 {
+.event_group .event_inner li.img2 {
     float: right;
 }
 
 
-.gallery_group .gallery_inner li img {
+.event_group .event_inner li img {
     width: 100%;
     height: auto;
 }
 
-.gallery_group .gallery_inner li.txt_group {
+.event_group .event_inner li.txt_group {
     display: table;
 }
 
-.gallery_group .gallery_inner li.txt_group .txt {
-    display: table-cell;
+.event_group .event_inner li.txt_group .txt {
+    /* display: table-cell; */
     vertical-align: middle;
-    padding: 0 100px;
+    padding: 0 0 0 35px;
 }
 
-.gallery_group .gallery_inner li.txt_group .txt p {
+.event_group .event_inner li.txt_group .txt.left_array {
+    padding: 0 35px 0 0;
+}
+.event_group .event_inner li.txt_group .txt p {
     line-height: 1.6;
     text-align: left;
-    margin: 10px 0;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.gallery_group .gallery_inner li.txt_group .txt .tit {
-    font-size: 24px;
+.event_group .event_inner li.txt_group .txt .tit {
+    font-size: 28px;
+    letter-spacing: 0px;
+    color:#102f54;
+}
+.event_group .event_inner li.txt_group .txt .tit span{
+    font-size: 32px;
+    vertical-align: top;
+    line-height: 40px;
+}
+.event_group .event_inner li.txt_group .txt .tit span strong {
+    font-weight: 700;
+    position: relative;
+}
+
+.event_group .event_inner li.txt_group .txt .tit span strong::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: -1px;
+    left: 1px;
+    background: #102f54;
+}
+
+.event_group .event_inner li.txt_group .txt .s_tit {
+    font-size: 23px;
     font-weight: bold;
-    letter-spacing: -2px;
+    color:#000;
+    margin:30px 0;
+}
+.event_group .event_inner li.txt_group .txt .guide {
+    color:#3479c7;
+    padding:0;
+}
+.event_group .event_inner li.txt_group .txt .guide::before{
+    content: "※";
+    margin-right:3px;
+    vertical-align: top;
+    font-weight: normal;
+}
+.event_group .event_inner li.txt_group .btn_detail {
+    padding: 0 0 0 35px;
+    margin-top:20px;
+    vertical-align: bottom;
+}
+.event_group .event_inner li.txt_group .btn_detail.no_pad {
+    padding: 0 0 0 0;
+}
+.event_group .event_inner li.txt_group .btn_detail img{
+   width:auto;
+   height:auto;
+}
+/* archive_group */
+.archive_group{
+    margin:50px auto 100px auto;
+    width:100%
+}
+.archive_group .tit{
+    margin-top:50px;
+    width:100%
+}
+.archive_group .tit {
+    font-size: 28px;
+    letter-spacing: 0px;
+    color:#102f54;
+}
+
+.archive_group .tit strong {
+    font-weight: 700;
+    position: relative;
+}
+
+.archive_group .tit strong::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: -1px;
+    left: 1px;
+    background: #102f54;
+}
+
+.archive_group .s_tit {
+    font-size: 23px;
+    color:#000;
+    margin:20px 0 40px 0;
+}
+.archive_group .text_area {
+    color:#808080;
+    font-size: 20px;
+}
+.archive_group .text_area span{
+    font-size: 22px;
+    vertical-align: top;
+    line-height: 26px;
+}
+.archive_group .text_area span strong {
+    font-weight: 700;
+    position: relative;
+}
+
+.archive_group .text_area strong::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 1px;
+    background: #808080;
+}
+.archive_group .gallery_area {
+    width:100%;
+    margin-top:30px;
+}
+.archive_group .gallery_area ul{
+    width:100%;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+.archive_group .gallery_area ul li{
+    display:inline-block;
+    width:calc(12.5% - 7.6px);
+    /* width:12.5%; */
+    margin:0 0 5px 5px;
+    overflow: hidden;
+}
+.archive_group .gallery_area ul li img{
+   width:100%;
+   height:auto;
+   vertical-align: top;
+}
+.archive_group .gallery_area ul li:nth-child(8n+1){
+    margin:0 0 5px 0;
+}
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
 }
 
 .swiper-container {
@@ -1340,9 +1480,7 @@ input:-mos-input-placeholder {
         max-width: 80%;
     }
 
-    .gallery_group .gallery_inner li.txt_group .txt {
-        padding: 0 50px;
-    }
+    
 
     /* 올바른 안전벨트 착용방법 */
     .belt_guide_group {
@@ -1614,47 +1752,58 @@ input:-mos-input-placeholder {
         /* max-width: 300px; */
     }
 
-    .gallery_group {
+    .event_group {
         padding: 60px 0 80px;
         overflow: hidden;
     }
 
-    .gallery_group .gallery_inner li {
+    .event_group .event_inner li {
         float: none;
         width: 100%;
         height: auto;
     }
 
-    .gallery_group .gallery_inner li.img1 {
+    .event_group .event_inner li.img1 {
         /* height: 279px;
         background: url("../images/img01_m.jpg") 50% top no-repeat;
         background-size: contain; */
     }
 
-    .gallery_group .gallery_inner li.img2 {
+    .event_group .event_inner li.img2 {
         float: none;
         width: 100%;
         height: auto;
     }
 
 
-    .gallery_group .gallery_inner li.txt_group {
+    .event_group .event_inner li.txt_group {
         height: auto;
     }
 
-    .gallery_group .gallery_inner li.txt_group .txt {
+    .event_group .event_inner li.txt_group .txt {
+        padding: 10px 20px;
+        letter-spacing: -2.0px;
+    }
+    .event_group .event_inner li.txt_group .txt.left_array {
         padding: 10px 20px;
         letter-spacing: -2.0px;
     }
 
-    .gallery_group .gallery_inner li.txt_group .txt .tit {
+    .event_group .event_inner li.txt_group .txt .tit {
         font-size: 22px;
         line-height: 1.2;
     }
-
-    .swiper-pagination-bullet {
-        width: 10px !important;
-        height: 10px !important;
+    .event_group .event_inner li.txt_group .btn_detail {
+        padding: 0 0 0 20px;
+    }
+    .event_group .event_inner li.txt_group .btn_detail.no_pad {
+        padding: 0 0 0 20px;
+    }
+    .archive_group .gallery_area ul li{
+        width:calc(25% - 7.6px);
+    }
+    .archive_group .gallery_area ul li:nth-child(4n+1){
+        margin:0 0 5px 0;
     }
 
     .swiper-button-prev,
@@ -2348,23 +2497,23 @@ input:-mos-input-placeholder {
         max-width: 250px;
     }
 
-    .gallery_group .gallery_inner li.img1 {
+    .event_group .event_inner li.img1 {
         height: 235px;
     }
 
-    .gallery_group .gallery_inner li.img2 {
+    .event_group .event_inner li.img2 {
         height: 235px;
     }
 
-    .gallery_group .gallery_inner li.img3 {
+    .event_group .event_inner li.img3 {
         height: 235px;
     }
 
-    .gallery_group .gallery_inner li.txt_group {
+    .event_group .event_inner li.txt_group {
         height: 410px;
     }
 
-    .gallery_group .gallery_inner li.txt_group .txt {
+    .event_group .event_inner li.txt_group .txt {
         padding: 10px;
         font-size: 14px;
     }
