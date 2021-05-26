@@ -20,7 +20,8 @@
             <button onclick="openPop('app_end1')">응모완료1주차</button>
             <button onclick="openPop('app_end2')">응모완료2주차</button>
             <button onclick="openPop('app_end3')">응모완료3주차</button>
-            <button onclick="openPop('event_app1')">응모하기1</button>
+            <button onclick="openPop('event_app1')">응모하기(온라인)</button>
+            <button onclick="openPop('event_app2')">응모하기(오프라인)</button>
             <button onclick="openPop('info_agree1')">개인정보수집동의</button>
             <button onclick="openPop('info_agree2')">개인정보처리위탁동의서</button>
             <button onclick="openPop('fourteen_agree')">14세이상응모확인동의서</button>
@@ -181,7 +182,7 @@
                 </div>
             </div>
         </div>
-        <!-- 응모하기 -->
+        <!-- 응모하기(온라인) -->
         <div class="pop_layer event_app1" id="event_app1" style="display: none;">
             <div class="top_header">
                 <h1 class="pop_header_tl"><a href="#"></a></h1>
@@ -209,7 +210,7 @@
                         MADE BY YOU 이벤트 응모를 위한 개인정보 수집·이용 및 처리 위탁에 관한 내용을 읽고 동의해주세요.<br>
                         이 동의를 거부할 수 있으나, 동의하지 않을 경우 해당 이벤트에 응모하실 수 없습니다.
                     </div>
-                    <div class="app_con_box">
+                    <div class="app_con_box online">
                         <div class="con_box_top">
                             <dl>
                                 <dt class="check_area"><input type="checkbox" id="chk_all" /><label for="chk_all">전체
@@ -234,9 +235,147 @@
                                 <dd><a href="javascript:void(0)" onclick="openPop('fourteen_agree')">[전문 보기]</a></dd>
                             </dl>
                             <dl>
-                                <dt class="check_area"><input type="checkbox" id="chk_agree3" class="normal" /><label
-                                        for="chk_agree3">SNS 저작물 이용 동의</label></dt>
+                                <dt class="check_area"><input type="checkbox" id="chk_agree4" class="normal" /><label
+                                        for="chk_agree4">SNS 저작물 이용 동의</label></dt>
                                 <dd><a href="javascript:void(0)" onclick="openPop('sns_agree')">[전문 보기]</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- 응모 정보 입력 -->
+                    <div class="app_tl">
+                        2. 응모 정보 입력
+                        <span>* 항목은 필수 입력 항목입니다.</span>
+                    </div>
+                    <div class="app_info_reg">
+                        <dl class="essential">
+                            <dt>이름</dt>
+                            <dd><input type="text" placeholder="차량 등록증 내 명의자 성함" /></dd>
+                        </dl>
+
+                        <div class="wide_dl_con">코오롱 오토모티브 이용 이력 <span>※1개 이상 선택 필수, 중복 선택 가능</span></div>
+                        <dl class="used_history">
+                            <dt>1.신규 차량 구매</dt>
+                            <dd>
+                                <select>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="used_history">
+                            <dt>2.SELEKT 차량 구매</dt>
+                            <dd>
+                                <select>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="used_history last_dl">
+                            <dt>3.서비스센터 이용</dt>
+                            <dd>
+                                <select>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                    <option>이용 전시장 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>영업 사원명</dt>
+                            <dd><input type="text" placeholder="담당 영업 사원명 입력(구매고객)" /></dd>
+                        </dl>
+                        <dl>
+                            <dt>차량 번호</dt>
+                            <dd><input type="text" placeholder="볼보 차량 번호 입력" /></dd>
+                        </dl>
+                        <ul class="guide_text">
+                            <li>온라인 이벤트는 코오롱 오토모티브 기존 고객만 응모 가능합니다. 출고 대기 고객(계약 완료 고객)은 오프라인 이벤트에 응모해주세요.</li>
+                        </ul>
+                        <dl class="essential">
+                            <dt>응모 URL</dt>
+                            <dd>
+                                <input type="text" placeholder="인증 번호 입력" />
+                            </dd>
+                        </dl>
+                        <ul class="guide_text">
+                            <li>이 이벤트에 응모하신 인스타 그램 컨텐츠는 이벤트 페이지 소셜보드(인스타그램 아카이브)에 자동으로 게시됩니다.</li>
+                            <li>이벤트와 관련이 없거나 비정상적인 컨텐츠로 응모 시 응모가 취소될 수 있습니다.</li>
+                        </ul>
+                        <dl class="essential">
+                            <dt>휴대폰 번호</dt>
+                            <dd class="phone">
+                                <input type="text" placeholder="- 없이 휴대폰 번호 입력" /><button>인증 번호 발송</button><br>
+                                <p>※구매하신 고객님의 연락처로 인증해주세요.</p>
+                            </dd>
+                        </dl>
+                        <dl class="essential">
+                            <dt>인증 번호</dt>
+                            <dd>
+                                <input type="text" placeholder="인증 번호 입력" />
+                                <span class="certify">03:00</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="pop_bottom_btn type_blue" onclick="closePop('event_app1')">
+                    응모하기
+                </div>
+            </div>
+        </div>
+        <!-- 응모하기(오프라인) -->
+        <div class="pop_layer event_app1" id="event_app2" style="display: none;">
+            <div class="top_header">
+                <h1 class="pop_header_tl"><a href="#"></a></h1>
+                <div class="pop_btn_close"><a href="javascript:void(0)" onclick="closePop('event_app2')"></a></div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_tl_area">
+                    <div class="pop_tl">
+                        KOLON AUTOMOTIVE
+                    </div>
+                    <div class="pop_tl2">
+                        MADE BY <strong>YOU</strong>
+                    </div>
+                    <div class="pop_stl">
+                        온라인 이벤트 정보 입력
+                    </div>
+                </div>
+
+                <div class="pop_con">
+                    <!-- 개인정보 수집동의 -->
+                    <div class="app_tl">
+                        1. 개인정보 수집·이용 및 처리 위탁에 대한 동의 안내
+                    </div>
+                    <div class="app_con">
+                        MADE BY YOU 이벤트 응모를 위한 개인정보 수집·이용 및 처리 위탁에 관한 내용을 읽고 동의해주세요.<br>
+                        이 동의를 거부할 수 있으나, 동의하지 않을 경우 해당 이벤트에 응모하실 수 없습니다.
+                    </div>
+                    <div class="app_con_box offline">
+                        <div class="con_box_top">
+                            <dl>
+                                <dt class="check_area"><input type="checkbox" id="chk_offline_all" /><label for="chk_offline_all">전체
+                                        동의</label></dt>
+                                <!-- <dd></dd> -->
+                            </dl>
+                        </div>
+                        <div class="con_box_bottom">
+                            <dl>
+                                <dt class="check_area"><input type="checkbox" id="chk_offline_agree1" class="normal" /><label
+                                        for="chk_offline_agree1">개인정보 수집 및 이용 동의</label></dt>
+                                <dd><a href="javascript:void(0)" onclick="openPop('info_agree1')">[전문 보기]</a></dd>
+                            </dl>
+                            <dl>
+                                <dt class="check_area"><input type="checkbox" id="chk_offline_agree2" class="normal" /><label
+                                        for="chk_offline_agree2">개인정보 처리 위탁 동의</label></dt>
+                                <dd><a href="javascript:void(0)" onclick="openPop('info_agree2')">[전문 보기]</a></dd>
+                            </dl>
+                            <dl>
+                                <dt class="check_area"><input type="checkbox" id="chk_offline_agree3" class="normal" /><label
+                                        for="chk_offline_agree3">만 14세 참여 확인 동의</label></dt>
+                                <dd><a href="javascript:void(0)" onclick="openPop('fourteen_agree')">[전문 보기]</a></dd>
                             </dl>
                         </div>
                     </div>
@@ -282,7 +421,7 @@
                             </dd>
                         </dl>
                         <dl class="used_history">
-                            <dt>1.신규 차량 구매</dt>
+                            <dt>2.SELEKT 차량 구매</dt>
                             <dd>
                                 <select>
                                     <option>이용 전시장 선택</option>
@@ -292,7 +431,7 @@
                             </dd>
                         </dl>
                         <dl class="used_history last_dl">
-                            <dt>1.신규 차량 구매</dt>
+                            <dt>3.서비스센터 이용</dt>
                             <dd>
                                 <select>
                                     <option>이용 전시장 선택</option>
@@ -325,7 +464,7 @@
                         </dl>
                     </div>
                 </div>
-                <div class="pop_bottom_btn type_blue" onclick="closePop('event_app1')">
+                <div class="pop_bottom_btn type_blue" onclick="closePop('event_app2')">
                     응모하기
                 </div>
             </div>
@@ -623,14 +762,26 @@
         $(".app_con_box").on("click", "#chk_all", function () {
             $(this).parents(".app_con_box").find('input').prop("checked", $(this).is(":checked"));
         });
+        // 체크박스 전체 선택
+        $(".app_con_box").on("click", "#chk_offline_all", function () {
+            $(this).parents(".app_con_box").find('input').prop("checked", $(this).is(":checked"));
+        });
 
         // 체크박스 개별 선택
-        $(".app_con_box").on("click", ".normal", function () {
+        $(".app_con_box.online").on("click", ".normal", function () {
             var is_checked = true;
-            $(".app_con_box .normal").each(function () {
+            $(".app_con_box.online .normal").each(function () {
                 is_checked = is_checked && $(this).is(":checked");
             });
             $("#chk_all").prop("checked", is_checked);
+        });
+        // 체크박스 개별 선택
+        $(".app_con_box.offline").on("click", ".normal", function () {
+            var is_checked = true;
+            $(".app_con_box.offline .normal").each(function () {
+                is_checked = is_checked && $(this).is(":checked");
+            });
+            $("#chk_offline_all").prop("checked", is_checked);
         });
     </script>
 </body>

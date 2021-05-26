@@ -21,16 +21,30 @@ $("document").ready(function () {
 //     });
 // });
 $(function () {
+    $('#btn_event1,#btn_event2,#btn_bot_guide').click(function(){
+        var btnImage = $(this).children("img");
+        btnImage.attr('src',function(index, attr){
+            if(attr.match('plus')){
+                return attr.replace("plus","minus")
+            } else{
+                return attr.replace("minus","plus")
+            }
+
+        })
+    });
     $("#btn_event1").click(function () {
-        console.log('123')
-        $(".event1_arrow").toggleClass('on');
-        $(".event1_txt_box").toggleClass('on');
+        $('.event1_arrow').toggleClass('on');
+        $('.event1_txt_box').toggleClass('on');
     });
     $("#btn_event2").click(function () {
-        console.log('123')
-        $(".event2_arrow").toggleClass('on');
-        $(".event2_txt_box").toggleClass('on');
+        $('.event2_arrow').toggleClass('on');
+        $('.event2_txt_box').toggleClass('on');
     });
+    // $("#btn_bot_guide").click(function(){
+    //     $('.warning_all_area').toggleClass('on');
+    // });
+    // 버튼토글
+    
 });
 // $(function () {
 //     var clipboard = new ClipboardJS('.hashtag_copy');

@@ -66,13 +66,12 @@
     right: 10px;
     width: 20px;
     height: 20px;
-    border: 1px solid #fff;
 }
 
 #wrap .pop_layer .top_header .pop_btn_close a {
     width: 20px !important;
     height: 20px !important;
-    background: url("../images/btn_close.png") left top no-repeat;
+    background: url("../images/popup/btn_close1.png") left top no-repeat;
     background-size: 20px 20px;
     display: block;
 }
@@ -101,13 +100,12 @@
     right: 10px;
     width: 30px;
     height: 30px;
-    border: 1px solid #fff;
 }
 
 #wrap .pop_layer .top_header_blue .pop_btn_close a {
     width: 30px !important;
     height: 30px !important;
-    background: url("../images/btn_close.png") left top no-repeat;
+    background: url("../images/popup/btn_close2.png") left top no-repeat;
     background-size: 20px 20px;
     display: block;
 }
@@ -475,6 +473,33 @@
     vertical-align: middle;
     font-weight: normal;
 }
+#wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg ul.guide_text {
+    padding-left:0.5em;
+    overflow: hidden;
+    width:100%;
+}
+
+#wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg ul.guide_text li{
+    list-style: none;
+    position: relative;
+    font-weight: normal;
+    line-height:20px;
+    text-align: left;
+    padding-left:8px;
+    margin-bottom:20px;
+    color:#284e7f;
+    word-break: break-all;
+}
+
+#wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg ul.guide_text li::before {
+    content: "※";
+    font-weight: normal;
+    position: absolute;
+    left: -0.5em;
+    top: -1px;
+}
+
+
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl dt.align_top {
     padding-top: 0px;
@@ -559,11 +584,11 @@
     cursor: pointer;
     line-height: 22px;
     padding-left: 32px;
-    background: url('../images/popup/btn_check_off.png') left 0/22px no-repeat;
+    background: url('../images/btn_radio_off.png') left 0/22px no-repeat;
 }
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl dd input[type=radio]:checked+label {
-    background-image: url('../images/popup/btn_check_on.png');
+    background-image: url('../images/btn_radio_on.png');
 }
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl.used_history {
@@ -579,15 +604,15 @@
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl.used_history dt {
     float: left;
-    width: 110px;
+    width: 140px;
     color: #152034;
     font-weight: normal;
-    letter-spacing: 0px;
+    letter-spacing: -1px;
 }
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl.used_history dd {
     float: left;
-    width: calc(100% - 110px);
+    width: calc(100% - 140px);
     /* margin-bottom:10px; */
 }
 
@@ -600,6 +625,13 @@
     box-sizing: border-box;
     outline: none;
     border: 1px solid #ccc;
+    appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+    background: url('../images/popup/select_bg.png') no-repeat 97% 15px;
+    background-size:20px 10px;
 }
 
 #wrap .pop_layer.event_app1 .pop_body .pop_con .app_info_reg dl dd span.certify {

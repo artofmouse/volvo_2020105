@@ -312,13 +312,17 @@ h3.title_group .stl_text1 .stl_text2_2 {
     width: 100%;
     height: auto;
     position: relative;
-    padding-top: 56%
+    padding-top: 56%;
+    background-color: #000;
+    text-align: center;
 }
 
+.media_group .media_inner li img,
 .media_group .media_inner li iframe {
     z-index: 1;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1060,6 +1064,23 @@ h3.title_group .stl_text1 .stl_text2_2 {
     vertical-align: top;
 }
 
+.warning_all_area {
+    width: 100%;
+    max-width: 1166px;
+    margin: 45px auto;
+    height: 0px;
+    padding: 0;
+    background-color: #fff;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.warning_all_area.on {
+    height: auto;
+    padding: 60px 0;
+    transition: all .3s;
+}
+
 /* 유의사항 */
 .warning_area{
     width: calc(100% - 30px);
@@ -1094,13 +1115,14 @@ h3.title_group .stl_text1 .stl_text2_2 {
     left: -0.5em;
     top: 0;
 }
-.warning_area .btn_area{
+.btn_bot_guide_area{
     font-size:16px;
     color:#3479c7;
     margin-top:30px;
     letter-spacing: -0.5px;
+    margin-left:15px;
 }
-.warning_area .btn_area a{
+.btn_bot_guide_area a{
     font-size:16px;
     color:#3479c7;
     letter-spacing: -0.5px;
